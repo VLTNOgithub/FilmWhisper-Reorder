@@ -156,8 +156,5 @@ function moveAbovePopular(metas, type) {
 const app = express(); // Create an Express app
 app.use(express.static(path.join(__dirname, '/'))); // Serve static files from the root directory
 
-serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 });
-
-app.listen(process.env.PORT || 8080, () => {
-  console.log('Website running on port 8080');
-});
+serveHTTP(builder.getInterface(), { port: process.env.PORT || 8080 });
+console.log('Website running on port 8080');
