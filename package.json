@@ -1,20 +1,21 @@
 {
-  "name": "stremio-topic-reorder",
-  "version": "0.0.7",
-  "description": "Stremio addon to reorder topics.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js &"
-  },
-  "dependencies": {
-    "express": "^4.21.2",
-    "node-fetch": "^2.6.1",
-    "stremio-addon-sdk": "^1.6.7"
-  },
-  "keywords": [
-    "stremio",
-    "addon"
-  ],
-  "author": "You",
-  "license": "MIT"
+	"name": "filmwhisper-reorder",
+	"version": "0.0.7",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.7.5",
+		"vitest": "~3.0.7",
+		"wrangler": "^4.6.0"
+	},
+	"dependencies": {
+		"express": "^4.21.2",
+		"node-fetch": "^2.6.1",
+		"stremio-addon-sdk": "^1.6.7"
+	}
 }
