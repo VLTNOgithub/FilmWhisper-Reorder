@@ -1,0 +1,1 @@
+// You can add some JavaScript here if you want to add any dynamic functionality to your website. For example, you could add a script to track how many times the "Install" button has been clicked.

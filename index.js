@@ -154,5 +154,3 @@ function moveAbovePopular(metas, type) {
 serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 }, () => {
   console.log('Addon is running on port 7000');
 });
-
-serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 })
