@@ -156,17 +156,10 @@ function moveAbovePopular(metas, type) {
 const app = express(); // Create an Express app
 app.use(express.static(path.join(__dirname, '/'))); // Serve static files from the root directory
 
-builder.getInterface = function() { // Override getInterface to use Express
-  return (handle, options) => {
-    if (handle === 'manifest') {
-      return manifest;
-    }
-    if (handle === 'catalog') {
-      return builder.getInterfaceCatalogHandler(options)
-    }
-  }
-}
-
-serveHTTP(app, { port: process.env.PORT || 7000 }, () => { // Use Express app in serveHTTP
+serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 }, () => { // Use Express app in serveHTTP
   console.log(`Addon and website running on port ${process.env.PORT || 7000}`);
+});
+
+app.listen(process.env.PORT || 8080, () => {
+  console.log('Website running on port 8080');
 });
