@@ -1,6 +1,19 @@
 {
+  "name": "stremio-topic-reorder",
+  "version": "0.0.7",
+  "description": "Stremio addon to reorder topics.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
-    "node-fetch": "^3.3.2",
-    "stremio-addon-sdk": "^1.6.10"
-  }
+    "node-fetch": "^2.6.1",
+    "stremio-addon-sdk": "^1.6.7"
+  },
+  "keywords": [
+    "stremio",
+    "addon"
+  ],
+  "author": "You",
+  "license": "MIT"
 }
