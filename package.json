@@ -4,7 +4,7 @@
   "description": "Stremio addon to reorder topics.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js" // This is the important line!
+    "start": "node index.js"
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
