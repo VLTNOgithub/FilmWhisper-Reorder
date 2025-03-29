@@ -17,5 +17,6 @@
 		"express": "^4.21.2",
 		"node-fetch": "^2.6.1",
 		"stremio-addon-sdk": "^1.6.10"
-	}
+	},
+	"platform": "node"
 }
