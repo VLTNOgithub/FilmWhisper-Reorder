@@ -1,6 +1,4 @@
 const { addonBuilder, serveHTTP } = require('stremio-addon-sdk')
-const path = require('path');
-const express = require('express'); // Import Express
 
 const manifest = {
   id: 'com.example.filmwhisper-reorder',
@@ -153,13 +151,6 @@ function moveAbovePopular(metas, type) {
     return metas;
 }
 
-const app = express(); // Create an Express app
-app.use(express.static(path.join(__dirname, '/'))); // Serve static files from the root directory
-
-serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 }, () => { // Use Express app in serveHTTP
-  console.log(`Addon and website running on port ${process.env.PORT || 7000}`);
-});
-
-app.listen(process.env.PORT || 8080, () => {
-  console.log('Website running on port 8080');
+serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 }, () => {
+  console.log('Addon is running on port 7000');
 });
